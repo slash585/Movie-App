@@ -10,6 +10,7 @@ import SnapKit
 
 protocol MovieListViewControllerProtocol: AnyObject {
     func prepareCollectionView()
+    func navigate(movie: MovieResult)
 }
 
 final class MovieListViewController: UIViewController {
@@ -54,6 +55,11 @@ extension MovieListViewController {
 }
 
 extension MovieListViewController: MovieListViewControllerProtocol {
+    func navigate(movie: MovieResult) {
+        let viewController = MovieDetailBuilder.make(movie: movie)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func prepareCollectionView() {
         view.addSubview(collectionView)
         
@@ -75,6 +81,11 @@ extension MovieListViewController: UICollectionViewDelegate, UICollectionViewDat
         guard let movie = viewModel?.movies?.results[indexPath.item] else { return cell }
         cell.configure(movie: movie)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let movie = viewModel?.movies?.results[indexPath.item] else { return }
+        navigate(movie: movie)
     }
 }
 
