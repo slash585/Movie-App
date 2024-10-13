@@ -21,6 +21,10 @@
 		562CC9F82CBC3ED600AD38E0 /* Enpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9F72CBC3ED600AD38E0 /* Enpoint.swift */; };
 		562CC9FA2CBC42BD00AD38E0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9F92CBC42BD00AD38E0 /* Movie.swift */; };
 		562CC9FC2CBC432400AD38E0 /* MovieListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9FB2CBC432400AD38E0 /* MovieListBuilder.swift */; };
+		562CC9FF2CBC470000AD38E0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 562CC9FE2CBC470000AD38E0 /* SnapKit */; };
+		562CCA012CBC470000AD38E0 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 562CCA002CBC470000AD38E0 /* SnapKit-Dynamic */; };
+		562CCA032CBC4D4900AD38E0 /* MovieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CCA022CBC4D4900AD38E0 /* MovieListCollectionViewCell.swift */; };
+		562CCA062CBC4FEC00AD38E0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 562CCA052CBC4FEC00AD38E0 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,7 @@
 		562CC9F72CBC3ED600AD38E0 /* Enpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enpoint.swift; sourceTree = "<group>"; };
 		562CC9F92CBC42BD00AD38E0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		562CC9FB2CBC432400AD38E0 /* MovieListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListBuilder.swift; sourceTree = "<group>"; };
+		562CCA022CBC4D4900AD38E0 /* MovieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				562CCA062CBC4FEC00AD38E0 /* Kingfisher in Frameworks */,
+				562CC9FF2CBC470000AD38E0 /* SnapKit in Frameworks */,
+				562CCA012CBC470000AD38E0 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,10 +163,11 @@
 		562CC9ED2CBC3CCA00AD38E0 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
-				562CC9BF2CBC3BF900AD38E0 /* MovieListViewController.swift */,
-				562CC9F22CBC3DC900AD38E0 /* MovieListViewModel.swift */,
 				562CC9F92CBC42BD00AD38E0 /* Movie.swift */,
 				562CC9FB2CBC432400AD38E0 /* MovieListBuilder.swift */,
+				562CC9BF2CBC3BF900AD38E0 /* MovieListViewController.swift */,
+				562CC9F22CBC3DC900AD38E0 /* MovieListViewModel.swift */,
+				562CCA022CBC4D4900AD38E0 /* MovieListCollectionViewCell.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -206,6 +215,11 @@
 			dependencies = (
 			);
 			name = "Movie App";
+			packageProductDependencies = (
+				562CC9FE2CBC470000AD38E0 /* SnapKit */,
+				562CCA002CBC470000AD38E0 /* SnapKit-Dynamic */,
+				562CCA052CBC4FEC00AD38E0 /* Kingfisher */,
+			);
 			productName = "Movie App";
 			productReference = 562CC9B82CBC3BF900AD38E0 /* Movie App.app */;
 			productType = "com.apple.product-type.application";
@@ -278,6 +292,10 @@
 				Base,
 			);
 			mainGroup = 562CC9AF2CBC3BF900AD38E0;
+			packageReferences = (
+				562CC9FD2CBC470000AD38E0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				562CCA042CBC4FEC00AD38E0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 562CC9B92CBC3BF900AD38E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -321,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				562CC9C02CBC3BF900AD38E0 /* MovieListViewController.swift in Sources */,
+				562CCA032CBC4D4900AD38E0 /* MovieListCollectionViewCell.swift in Sources */,
 				562CC9FC2CBC432400AD38E0 /* MovieListBuilder.swift in Sources */,
 				562CC9BC2CBC3BF900AD38E0 /* AppDelegate.swift in Sources */,
 				562CC9BE2CBC3BF900AD38E0 /* SceneDelegate.swift in Sources */,
@@ -673,6 +692,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		562CC9FD2CBC470000AD38E0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		562CCA042CBC4FEC00AD38E0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		562CC9FE2CBC470000AD38E0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 562CC9FD2CBC470000AD38E0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		562CCA002CBC470000AD38E0 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 562CC9FD2CBC470000AD38E0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		562CCA052CBC4FEC00AD38E0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 562CCA042CBC4FEC00AD38E0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 562CC9B02CBC3BF900AD38E0 /* Project object */;
 }
