@@ -7,7 +7,9 @@
 
 import UIKit
 
-protocol MovieListViewControllerProtocol: AnyObject {}
+protocol MovieListViewControllerProtocol: AnyObject {
+    func prepareCollectionView()
+}
 
 final class MovieListViewController: UIViewController {
 
@@ -16,8 +18,13 @@ final class MovieListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.viewDidLoad()
+        view.backgroundColor = .white
     }
 }
 
-extension MovieListViewController: MovieListViewControllerProtocol {}
+extension MovieListViewController: MovieListViewControllerProtocol {
+    func prepareCollectionView() {
+        print(viewModel?.movies)
+    }
+}
 

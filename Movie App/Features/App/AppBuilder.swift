@@ -10,10 +10,7 @@ import UIKit
 
 final class AppBuilder {
     static func make () -> UIViewController {
-        let viewController = MovieListViewController()
-        let viewModel: MovieListViewModelProtocol = MovieListViewModel(view: viewController)
-        viewController.viewModel = viewModel
-        viewController.title = "Movie List"
+        let viewController = MovieListBuilder.make()
         return viewController
     }
 }

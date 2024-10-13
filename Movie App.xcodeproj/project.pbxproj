@@ -17,6 +17,10 @@
 		562CC9DF2CBC3BFB00AD38E0 /* Movie_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9DE2CBC3BFB00AD38E0 /* Movie_AppUITestsLaunchTests.swift */; };
 		562CC9F12CBC3D4900AD38E0 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9F02CBC3D4900AD38E0 /* AppBuilder.swift */; };
 		562CC9F32CBC3DC900AD38E0 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9F22CBC3DC900AD38E0 /* MovieListViewModel.swift */; };
+		562CC9F62CBC3EBC00AD38E0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9F52CBC3EBC00AD38E0 /* NetworkService.swift */; };
+		562CC9F82CBC3ED600AD38E0 /* Enpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9F72CBC3ED600AD38E0 /* Enpoint.swift */; };
+		562CC9FA2CBC42BD00AD38E0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9F92CBC42BD00AD38E0 /* Movie.swift */; };
+		562CC9FC2CBC432400AD38E0 /* MovieListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CC9FB2CBC432400AD38E0 /* MovieListBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		562CC9DE2CBC3BFB00AD38E0 /* Movie_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		562CC9F02CBC3D4900AD38E0 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
 		562CC9F22CBC3DC900AD38E0 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		562CC9F52CBC3EBC00AD38E0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		562CC9F72CBC3ED600AD38E0 /* Enpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enpoint.swift; sourceTree = "<group>"; };
+		562CC9F92CBC42BD00AD38E0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		562CC9FB2CBC432400AD38E0 /* MovieListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		562CC9BA2CBC3BF900AD38E0 /* Movie App */ = {
 			isa = PBXGroup;
 			children = (
+				562CC9F42CBC3EAF00AD38E0 /* Services */,
 				562CC9EB2CBC3CB800AD38E0 /* Delegates */,
 				562CC9EC2CBC3CC300AD38E0 /* Features */,
 				562CC9EE2CBC3CDA00AD38E0 /* Resources */,
@@ -148,6 +157,8 @@
 			children = (
 				562CC9BF2CBC3BF900AD38E0 /* MovieListViewController.swift */,
 				562CC9F22CBC3DC900AD38E0 /* MovieListViewModel.swift */,
+				562CC9F92CBC42BD00AD38E0 /* Movie.swift */,
+				562CC9FB2CBC432400AD38E0 /* MovieListBuilder.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -168,6 +179,15 @@
 				562CC9F02CBC3D4900AD38E0 /* AppBuilder.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		562CC9F42CBC3EAF00AD38E0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				562CC9F52CBC3EBC00AD38E0 /* NetworkService.swift */,
+				562CC9F72CBC3ED600AD38E0 /* Enpoint.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,9 +321,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				562CC9C02CBC3BF900AD38E0 /* MovieListViewController.swift in Sources */,
+				562CC9FC2CBC432400AD38E0 /* MovieListBuilder.swift in Sources */,
 				562CC9BC2CBC3BF900AD38E0 /* AppDelegate.swift in Sources */,
 				562CC9BE2CBC3BF900AD38E0 /* SceneDelegate.swift in Sources */,
+				562CC9F82CBC3ED600AD38E0 /* Enpoint.swift in Sources */,
 				562CC9F12CBC3D4900AD38E0 /* AppBuilder.swift in Sources */,
+				562CC9F62CBC3EBC00AD38E0 /* NetworkService.swift in Sources */,
+				562CC9FA2CBC42BD00AD38E0 /* Movie.swift in Sources */,
 				562CC9F32CBC3DC900AD38E0 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
